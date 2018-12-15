@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import BannerView from './component/BannerView';
+import ContentView from './component/ContentView';
+import FooterView from "./component/FooterView";
+import TopBarView from "./component/TopBarView";
 
 class App extends Component {
   render() {
     return (
-      <div className="app-wrapper">
-        <header className="bg-red">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app-container">
+        <BannerView />
+        <TopBarView />
+        <ContentView />
+        <FooterView />
       </div>
     );
   }
